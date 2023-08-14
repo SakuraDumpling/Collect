@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviour
         Run();
         Filp();
         Jump();
+        //Attack();
         CheckGround();
         SwitchAnimation();
+        
     }
 
     //检查地面
@@ -39,7 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));    //如果碰到了这个layer的话isGround就会返回true
         //测试
-        Debug.Log(isGround);
+        //Debug.Log(isGround);
     }
 
     //翻转
@@ -98,6 +100,18 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+
+    ////攻击函数
+    //void Attack()
+    //{
+    //    //如果按下了攻击键，此处已经在设置中定义过攻击为j
+    //    if (Input.GetButtonDown("Attack"))
+    //    {
+    //        //检测触发器trigger后切换动画
+    //        myAnim.SetTrigger("Attack");
+    //    }
+    //}
 
     //动画切换
     void SwitchAnimation()
