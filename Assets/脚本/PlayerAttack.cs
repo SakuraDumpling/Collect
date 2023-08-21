@@ -51,4 +51,13 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(time);  //暂停协程一段时间
         collider2D.enabled = false;
     }
+
+    //触发函数，如果碰到的东西带有Enemy的tag
+    private void OnTriggerEnter2D(Collider2D orther)
+    {
+        if (orther.gameObject.CompareTag("Enemy"))
+        {
+            orther.GetComponent<Enemy>().TakeDamage(damage); //如果碰到了就扣掉和伤害值一样的血量
+        }
+    }
 }

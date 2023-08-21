@@ -326,6 +326,12 @@ __pycache__/
 # Telerik's JustMock configuration file
 *.jmconfig
 
+#自己加的一段
+Temp/UnityLockfile
+logs/
+*.log
+*.class
+
 # BizTalk build output
 *.btp.cs
 *.btm.cs
